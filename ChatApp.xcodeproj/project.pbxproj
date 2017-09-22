@@ -50,30 +50,6 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		9EB0749E1F75928D0090FCDC /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Controller;
-			path = "New Group";
-			sourceTree = "<group>";
-		};
-		9EB0749F1F7592A40090FCDC /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = View;
-			path = "New Group1";
-			sourceTree = "<group>";
-		};
-		9EB074A01F7592AE0090FCDC /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Model;
-			path = "New Group2";
-			sourceTree = "<group>";
-		};
 		9EB726BC1F75873700F461E0 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -106,9 +82,6 @@
 		9EE1C8CC1F7583580060F1FA /* ChatApp */ = {
 			isa = PBXGroup;
 			children = (
-				9EB074A01F7592AE0090FCDC /* Model */,
-				9EB0749F1F7592A40090FCDC /* View */,
-				9EB0749E1F75928D0090FCDC /* Controller */,
 				9EE1C8CD1F7583580060F1FA /* AppDelegate.swift */,
 				9EE1C8D11F7583580060F1FA /* Main.storyboard */,
 				9EE1C8D41F7583580060F1FA /* Assets.xcassets */,

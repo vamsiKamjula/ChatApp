@@ -8,6 +8,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="ChalkboardSE.ttc">
+            <string>ChalkboardSE-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Reveal View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -35,13 +40,50 @@
                     <view key="view" contentMode="scaleToFill" id="gxN-HN-YmM">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hmf-eC-PqN">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="77"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cy9-RT-fvi">
+                                        <rect key="frame" x="12" y="47" width="24" height="18"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="18" id="6TJ-S4-5MU"/>
+                                            <constraint firstAttribute="width" constant="24" id="gSw-bT-Tdd"/>
+                                        </constraints>
+                                        <state key="normal" image="smackBurger"/>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T0U-I8-dTz">
+                                        <rect key="frame" x="163" y="39" width="49.5" height="34"/>
+                                        <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="24"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.29019607843137252" green="0.30196078431372547" blue="0.85882352941176465" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="77" id="8sU-5e-DzA"/>
+                                    <constraint firstItem="cy9-RT-fvi" firstAttribute="leading" secondItem="hmf-eC-PqN" secondAttribute="leading" constant="12" id="9cf-D3-59w"/>
+                                    <constraint firstItem="T0U-I8-dTz" firstAttribute="centerY" secondItem="cy9-RT-fvi" secondAttribute="centerY" id="IvF-np-fBe"/>
+                                    <constraint firstItem="T0U-I8-dTz" firstAttribute="centerX" secondItem="hmf-eC-PqN" secondAttribute="centerX" id="Yve-oj-gUa"/>
+                                    <constraint firstAttribute="bottom" secondItem="cy9-RT-fvi" secondAttribute="bottom" constant="12" id="yhQ-cx-WnX"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="hmf-eC-PqN" firstAttribute="leading" secondItem="esS-zs-Vuc" secondAttribute="leading" id="NW1-vp-xjL"/>
+                            <constraint firstItem="hmf-eC-PqN" firstAttribute="top" secondItem="gxN-HN-YmM" secondAttribute="top" id="nnl-QG-BDI"/>
+                            <constraint firstItem="hmf-eC-PqN" firstAttribute="trailing" secondItem="esS-zs-Vuc" secondAttribute="trailing" id="qpn-MC-Iin"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="esS-zs-Vuc"/>
                     </view>
+                    <connections>
+                        <outlet property="menuBtn" destination="cy9-RT-fvi" id="DZg-Io-O4k"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z04-xW-aJD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1146" y="465"/>
+            <point key="canvasLocation" x="1070" y="467"/>
         </scene>
         <!--ChannelVC-->
         <scene sceneID="sSw-Rp-uYK">
@@ -59,4 +101,7 @@
             <point key="canvasLocation" x="1070" y="-290"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="smackBurger" width="40" height="40"/>
+    </resources>
 </document>

@@ -14,6 +14,7 @@
 		9EB074AD1F76B0D00090FCDC /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB074AC1F76B0D00090FCDC /* GradientView.swift */; };
 		9EB074B01F76BFF70090FCDC /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB074AF1F76BFF60090FCDC /* Constants.swift */; };
 		9EB074B21F76C6B70090FCDC /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB074B11F76C6B60090FCDC /* LoginVC.swift */; };
+		9EB074B41F7709750090FCDC /* CreateAccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB074B31F7709740090FCDC /* CreateAccountVC.swift */; };
 		9EE1C8CE1F7583580060F1FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE1C8CD1F7583580060F1FA /* AppDelegate.swift */; };
 		9EE1C8D31F7583580060F1FA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9EE1C8D11F7583580060F1FA /* Main.storyboard */; };
 		9EE1C8D51F7583580060F1FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9EE1C8D41F7583580060F1FA /* Assets.xcassets */; };
@@ -28,6 +29,7 @@
 		9EB074AC1F76B0D00090FCDC /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		9EB074AF1F76BFF60090FCDC /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		9EB074B11F76C6B60090FCDC /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		9EB074B31F7709740090FCDC /* CreateAccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountVC.swift; sourceTree = "<group>"; };
 		9EB726BD1F75874B00F461E0 /* ChatApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ChatApp-Bridging-Header.h"; sourceTree = "<group>"; };
 		9EB726BE1F75874C00F461E0 /* SWRevealViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		9EB726BF1F75874D00F461E0 /* SWRevealViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
@@ -67,6 +69,7 @@
 				9EB074A71F75A2DF0090FCDC /* ChatVC.swift */,
 				9EB074A51F75A2D10090FCDC /* ChannelVC.swift */,
 				9EB074B11F76C6B60090FCDC /* LoginVC.swift */,
+				9EB074B31F7709740090FCDC /* CreateAccountVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -278,6 +281,7 @@
 			files = (
 				9EB074A81F75A2DF0090FCDC /* ChatVC.swift in Sources */,
 				9EB074A61F75A2D10090FCDC /* ChannelVC.swift in Sources */,
+				9EB074B41F7709750090FCDC /* CreateAccountVC.swift in Sources */,
 				9EB074B21F76C6B70090FCDC /* LoginVC.swift in Sources */,
 				9EB074AD1F76B0D00090FCDC /* GradientView.swift in Sources */,
 				9EE1C8CE1F7583580060F1FA /* AppDelegate.swift in Sources */,

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		255CEC59E3F7559DF6CA3A27 /* Pods_ChatApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59279859A0C88B089841D2BA /* Pods_ChatApp.framework */; };
+		9E0EDE9A1F7838D4002766B7 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0EDE991F7838D4002766B7 /* AuthService.swift */; };
 		9EB074A61F75A2D10090FCDC /* ChannelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB074A51F75A2D10090FCDC /* ChannelVC.swift */; };
 		9EB074A81F75A2DF0090FCDC /* ChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB074A71F75A2DF0090FCDC /* ChatVC.swift */; };
 		9EB074A91F75A8C30090FCDC /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EB726BE1F75874C00F461E0 /* SWRevealViewController.m */; };
@@ -24,6 +25,7 @@
 /* Begin PBXFileReference section */
 		012A4CDACC924B13391A1CDA /* Pods-ChatApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChatApp/Pods-ChatApp.release.xcconfig"; sourceTree = "<group>"; };
 		59279859A0C88B089841D2BA /* Pods_ChatApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChatApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9E0EDE991F7838D4002766B7 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		9EB074A51F75A2D10090FCDC /* ChannelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelVC.swift; sourceTree = "<group>"; };
 		9EB074A71F75A2DF0090FCDC /* ChatVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatVC.swift; sourceTree = "<group>"; };
 		9EB074AC1F76B0D00090FCDC /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
@@ -61,6 +63,14 @@
 				012A4CDACC924B13391A1CDA /* Pods-ChatApp.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		9E0EDE981F7838BD002766B7 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				9E0EDE991F7838D4002766B7 /* AuthService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		9EB074AA1F75A9A30090FCDC /* Controller */ = {
@@ -124,6 +134,7 @@
 			children = (
 				9EE1C8CD1F7583580060F1FA /* AppDelegate.swift */,
 				9EE1C8D11F7583580060F1FA /* Main.storyboard */,
+				9E0EDE981F7838BD002766B7 /* Services */,
 				9EB074AE1F76BFDE0090FCDC /* Utilities */,
 				9EB074AB1F76B0B10090FCDC /* View */,
 				9EB074AA1F75A9A30090FCDC /* Controller */,
@@ -282,6 +293,7 @@
 				9EB074A81F75A2DF0090FCDC /* ChatVC.swift in Sources */,
 				9EB074A61F75A2D10090FCDC /* ChannelVC.swift in Sources */,
 				9EB074B41F7709750090FCDC /* CreateAccountVC.swift in Sources */,
+				9E0EDE9A1F7838D4002766B7 /* AuthService.swift in Sources */,
 				9EB074B21F76C6B70090FCDC /* LoginVC.swift in Sources */,
 				9EB074AD1F76B0D00090FCDC /* GradientView.swift in Sources */,
 				9EE1C8CE1F7583580060F1FA /* AppDelegate.swift in Sources */,

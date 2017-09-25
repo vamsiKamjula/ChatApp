@@ -24,6 +24,7 @@
 		9EEE326D1F797A1D0030CDD7 /* AvatarPickerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EEE326C1F797A1D0030CDD7 /* AvatarPickerVC.swift */; };
 		9EEE326F1F797C1C0030CDD7 /* AvatarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EEE326E1F797C1C0030CDD7 /* AvatarCell.swift */; };
 		9EEE32711F79849D0030CDD7 /* UserDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EEE32701F79849D0030CDD7 /* UserDataService.swift */; };
+		9EEE32731F7996380030CDD7 /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EEE32721F7996380030CDD7 /* CircleImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +50,7 @@
 		9EEE326C1F797A1D0030CDD7 /* AvatarPickerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarPickerVC.swift; sourceTree = "<group>"; };
 		9EEE326E1F797C1C0030CDD7 /* AvatarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarCell.swift; sourceTree = "<group>"; };
 		9EEE32701F79849D0030CDD7 /* UserDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataService.swift; sourceTree = "<group>"; };
+		9EEE32721F7996380030CDD7 /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
 		AACBE6DC24EB82F8BCCA5B21 /* Pods-ChatApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChatApp/Pods-ChatApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -99,6 +101,7 @@
 			children = (
 				9EB074AC1F76B0D00090FCDC /* GradientView.swift */,
 				9EEE326E1F797C1C0030CDD7 /* AvatarCell.swift */,
+				9EEE32721F7996380030CDD7 /* CircleImage.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -308,6 +311,7 @@
 				9EB074A81F75A2DF0090FCDC /* ChatVC.swift in Sources */,
 				9EEE326D1F797A1D0030CDD7 /* AvatarPickerVC.swift in Sources */,
 				9EB074A61F75A2D10090FCDC /* ChannelVC.swift in Sources */,
+				9EEE32731F7996380030CDD7 /* CircleImage.swift in Sources */,
 				9EB074B41F7709750090FCDC /* CreateAccountVC.swift in Sources */,
 				9E0EDE9A1F7838D4002766B7 /* AuthService.swift in Sources */,
 				9EB074B21F76C6B70090FCDC /* LoginVC.swift in Sources */,

@@ -21,6 +21,8 @@
 		9EE1C8D51F7583580060F1FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9EE1C8D41F7583580060F1FA /* Assets.xcassets */; };
 		9EE1C8D81F7583580060F1FA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9EE1C8D61F7583580060F1FA /* LaunchScreen.storyboard */; };
 		9EEE326B1F795A640030CDD7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9EEE326A1F7956CB0030CDD7 /* GoogleService-Info.plist */; };
+		9EEE326D1F797A1D0030CDD7 /* AvatarPickerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EEE326C1F797A1D0030CDD7 /* AvatarPickerVC.swift */; };
+		9EEE326F1F797C1C0030CDD7 /* AvatarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EEE326E1F797C1C0030CDD7 /* AvatarCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +45,8 @@
 		9EE1C8D71F7583580060F1FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9EE1C8D91F7583580060F1FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9EEE326A1F7956CB0030CDD7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		9EEE326C1F797A1D0030CDD7 /* AvatarPickerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarPickerVC.swift; sourceTree = "<group>"; };
+		9EEE326E1F797C1C0030CDD7 /* AvatarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarCell.swift; sourceTree = "<group>"; };
 		AACBE6DC24EB82F8BCCA5B21 /* Pods-ChatApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChatApp/Pods-ChatApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -82,6 +86,7 @@
 				9EB074A51F75A2D10090FCDC /* ChannelVC.swift */,
 				9EB074B11F76C6B60090FCDC /* LoginVC.swift */,
 				9EB074B31F7709740090FCDC /* CreateAccountVC.swift */,
+				9EEE326C1F797A1D0030CDD7 /* AvatarPickerVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -90,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				9EB074AC1F76B0D00090FCDC /* GradientView.swift */,
+				9EEE326E1F797C1C0030CDD7 /* AvatarCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -297,10 +303,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				9EB074A81F75A2DF0090FCDC /* ChatVC.swift in Sources */,
+				9EEE326D1F797A1D0030CDD7 /* AvatarPickerVC.swift in Sources */,
 				9EB074A61F75A2D10090FCDC /* ChannelVC.swift in Sources */,
 				9EB074B41F7709750090FCDC /* CreateAccountVC.swift in Sources */,
 				9E0EDE9A1F7838D4002766B7 /* AuthService.swift in Sources */,
 				9EB074B21F76C6B70090FCDC /* LoginVC.swift in Sources */,
+				9EEE326F1F797C1C0030CDD7 /* AvatarCell.swift in Sources */,
 				9EB074AD1F76B0D00090FCDC /* GradientView.swift in Sources */,
 				9EE1C8CE1F7583580060F1FA /* AppDelegate.swift in Sources */,
 				9EB074A91F75A8C30090FCDC /* SWRevealViewController.m in Sources */,

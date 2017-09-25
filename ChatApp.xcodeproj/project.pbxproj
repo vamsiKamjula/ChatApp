@@ -20,6 +20,7 @@
 		9EE1C8D31F7583580060F1FA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9EE1C8D11F7583580060F1FA /* Main.storyboard */; };
 		9EE1C8D51F7583580060F1FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9EE1C8D41F7583580060F1FA /* Assets.xcassets */; };
 		9EE1C8D81F7583580060F1FA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9EE1C8D61F7583580060F1FA /* LaunchScreen.storyboard */; };
+		9EEE326B1F795A640030CDD7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9EEE326A1F7956CB0030CDD7 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		9EE1C8D41F7583580060F1FA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9EE1C8D71F7583580060F1FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9EE1C8D91F7583580060F1FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9EEE326A1F7956CB0030CDD7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		AACBE6DC24EB82F8BCCA5B21 /* Pods-ChatApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChatApp/Pods-ChatApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -141,6 +143,7 @@
 				9EB726BC1F75873700F461E0 /* Supporting Files */,
 				9EE1C8D41F7583580060F1FA /* Assets.xcassets */,
 				9EE1C8D61F7583580060F1FA /* LaunchScreen.storyboard */,
+				9EEE326A1F7956CB0030CDD7 /* GoogleService-Info.plist */,
 				9EE1C8D91F7583580060F1FA /* Info.plist */,
 			);
 			path = ChatApp;
@@ -218,6 +221,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9EE1C8D81F7583580060F1FA /* LaunchScreen.storyboard in Resources */,
+				9EEE326B1F795A640030CDD7 /* GoogleService-Info.plist in Resources */,
 				9EE1C8D51F7583580060F1FA /* Assets.xcassets in Resources */,
 				9EE1C8D31F7583580060F1FA /* Main.storyboard in Resources */,
 			);
@@ -252,16 +256,18 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-ChatApp/Pods-ChatApp-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/Socket.IO-Client-Swift/SocketIO.framework",
-				"${BUILT_PRODUCTS_DIR}/StarscreamSocketIO/StarscreamSocketIO.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SocketIO.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/StarscreamSocketIO.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

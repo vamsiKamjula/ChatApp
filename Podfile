@@ -7,5 +7,7 @@ target 'ChatApp' do
 
   pod ‘Alamofire’
   pod ‘SwiftyJSON’
-  pod ‘Socket.IO-Client-Swift’ 
+  pod 'Firebase/Core'
+  pod 'Firebase/Auth’
+  pod 'Firebase/Storage'
 end

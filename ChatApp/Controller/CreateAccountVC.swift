@@ -60,6 +60,7 @@ class CreateAccountVC: UIViewController {
                 UserDataService.instance.setAvatarName(avatarName: self.avatarName)
                 UserDataService.instance.setAvatarColor(avatarColor: self.avatarColor)
                 UserDataService.instance.setName(name: self.usernameTxt.text!)
+                UserDataService.instance.setUserEmail(userEmail: email)
                 self.spinner.isHidden = false
                 self.spinner.stopAnimating()
                 self.performSegue(withIdentifier: UNWIND, sender: nil)

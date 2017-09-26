@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import FirebaseAuth
 
 class UserDataService {
     
@@ -28,6 +29,10 @@ class UserDataService {
     
     func setAvatarName(avatarName: String) {
         self.avatarName = avatarName
+    }
+    
+    func setUserEmail(userEmail: String) {
+        self.email = userEmail
     }
     
     func setName(name: String) {
@@ -66,5 +71,18 @@ class UserDataService {
         let newUIColor = UIColor(red: rFloat, green: gFloat, blue: bFloat, alpha: aFloat)
         
         return newUIColor
+    }
+    
+    func logoutUser() {
+        self.id = ""
+        self.avatarName = ""
+        self.avatarColor = ""
+        self.name = ""
+        self.email = ""
+        do {
+            try Auth.auth().signOut()
+        } catch let logoutErr {
+            print(logoutErr.localizedDescription)
+        }
     }
 }

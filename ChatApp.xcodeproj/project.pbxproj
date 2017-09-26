@@ -25,6 +25,8 @@
 		9EEE326F1F797C1C0030CDD7 /* AvatarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EEE326E1F797C1C0030CDD7 /* AvatarCell.swift */; };
 		9EEE32711F79849D0030CDD7 /* UserDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EEE32701F79849D0030CDD7 /* UserDataService.swift */; };
 		9EEE32731F7996380030CDD7 /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EEE32721F7996380030CDD7 /* CircleImage.swift */; };
+		9EEE32761F79DDF90030CDD7 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EEE32741F79DDF90030CDD7 /* ProfileVC.swift */; };
+		9EEE32771F79DDF90030CDD7 /* ProfileVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9EEE32751F79DDF90030CDD7 /* ProfileVC.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +53,8 @@
 		9EEE326E1F797C1C0030CDD7 /* AvatarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarCell.swift; sourceTree = "<group>"; };
 		9EEE32701F79849D0030CDD7 /* UserDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataService.swift; sourceTree = "<group>"; };
 		9EEE32721F7996380030CDD7 /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
+		9EEE32741F79DDF90030CDD7 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
+		9EEE32751F79DDF90030CDD7 /* ProfileVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileVC.xib; sourceTree = "<group>"; };
 		AACBE6DC24EB82F8BCCA5B21 /* Pods-ChatApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChatApp/Pods-ChatApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -92,6 +96,7 @@
 				9EB074B11F76C6B60090FCDC /* LoginVC.swift */,
 				9EB074B31F7709740090FCDC /* CreateAccountVC.swift */,
 				9EEE326C1F797A1D0030CDD7 /* AvatarPickerVC.swift */,
+				9EEE32741F79DDF90030CDD7 /* ProfileVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -148,6 +153,7 @@
 			children = (
 				9EE1C8CD1F7583580060F1FA /* AppDelegate.swift */,
 				9EE1C8D11F7583580060F1FA /* Main.storyboard */,
+				9EEE32781F79DDFE0030CDD7 /* XIBs */,
 				9E0EDE981F7838BD002766B7 /* Services */,
 				9EB074AE1F76BFDE0090FCDC /* Utilities */,
 				9EB074AB1F76B0B10090FCDC /* View */,
@@ -159,6 +165,14 @@
 				9EE1C8D91F7583580060F1FA /* Info.plist */,
 			);
 			path = ChatApp;
+			sourceTree = "<group>";
+		};
+		9EEE32781F79DDFE0030CDD7 /* XIBs */ = {
+			isa = PBXGroup;
+			children = (
+				9EEE32751F79DDF90030CDD7 /* ProfileVC.xib */,
+			);
+			path = XIBs;
 			sourceTree = "<group>";
 		};
 		F13AE1756C6C7C6982706377 /* Frameworks */ = {
@@ -236,6 +250,7 @@
 				9EEE326B1F795A640030CDD7 /* GoogleService-Info.plist in Resources */,
 				9EE1C8D51F7583580060F1FA /* Assets.xcassets in Resources */,
 				9EE1C8D31F7583580060F1FA /* Main.storyboard in Resources */,
+				9EEE32771F79DDF90030CDD7 /* ProfileVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,6 +325,7 @@
 			files = (
 				9EB074A81F75A2DF0090FCDC /* ChatVC.swift in Sources */,
 				9EEE326D1F797A1D0030CDD7 /* AvatarPickerVC.swift in Sources */,
+				9EEE32761F79DDF90030CDD7 /* ProfileVC.swift in Sources */,
 				9EB074A61F75A2D10090FCDC /* ChannelVC.swift in Sources */,
 				9EEE32731F7996380030CDD7 /* CircleImage.swift in Sources */,
 				9EB074B41F7709750090FCDC /* CreateAccountVC.swift in Sources */,

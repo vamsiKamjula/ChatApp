@@ -127,14 +127,14 @@
                                 </constraints>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mct-Ax-j1G">
-                                <rect key="frame" x="10" y="143" width="355" height="409"/>
+                                <rect key="frame" x="0.0" y="143" width="375" height="409"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="E9P-ZN-OEs">
-                                        <rect key="frame" x="0.0" y="28" width="355" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="channelCell" id="E9P-ZN-OEs" customClass="ChannelCell" customModule="ChatApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="E9P-ZN-OEs" id="l4f-kI-X8s">
-                                            <rect key="frame" x="0.0" y="0.0" width="355" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#general" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ki-d6-2Gw">
@@ -151,6 +151,9 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <outlet property="channelName" destination="1ki-d6-2Gw" id="EyN-jh-vuh"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -169,9 +172,9 @@
                         <constraints>
                             <constraint firstItem="mct-Ax-j1G" firstAttribute="top" secondItem="ZqU-Qs-28X" secondAttribute="bottom" constant="20" id="1NA-Z1-pzk"/>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="JNB-i4-Ewg" secondAttribute="trailing" constant="20" symbolic="YES" id="1cW-rJ-7Kr"/>
-                            <constraint firstItem="mct-Ax-j1G" firstAttribute="leading" secondItem="BPp-L6-bP8" secondAttribute="leading" constant="10" id="83z-En-DaW"/>
+                            <constraint firstItem="mct-Ax-j1G" firstAttribute="leading" secondItem="BPp-L6-bP8" secondAttribute="leading" id="83z-En-DaW"/>
                             <constraint firstItem="HQn-ya-PKC" firstAttribute="centerY" secondItem="fa5-2E-FcS" secondAttribute="centerY" id="8ED-z5-xNc"/>
-                            <constraint firstItem="BPp-L6-bP8" firstAttribute="trailing" secondItem="mct-Ax-j1G" secondAttribute="trailing" constant="10" id="CSd-a0-pKv"/>
+                            <constraint firstItem="BPp-L6-bP8" firstAttribute="trailing" secondItem="mct-Ax-j1G" secondAttribute="trailing" id="CSd-a0-pKv"/>
                             <constraint firstItem="HQn-ya-PKC" firstAttribute="leading" secondItem="fa5-2E-FcS" secondAttribute="trailing" constant="20" id="FSU-0j-GTX"/>
                             <constraint firstItem="BPp-L6-bP8" firstAttribute="trailing" secondItem="HQn-ya-PKC" secondAttribute="trailing" constant="202" id="SVD-bz-ikC"/>
                             <constraint firstItem="CE8-9M-KJG" firstAttribute="top" secondItem="JNB-i4-Ewg" secondAttribute="bottom" constant="20" id="cbR-Vf-ONa"/>
@@ -199,6 +202,7 @@
                     </view>
                     <connections>
                         <outlet property="loginBtn" destination="HQn-ya-PKC" id="gsX-2Q-wWB"/>
+                        <outlet property="tableView" destination="mct-Ax-j1G" id="fvJ-lB-jvH"/>
                         <outlet property="userImg" destination="fa5-2E-FcS" id="2LL-IN-V70"/>
                         <segue destination="Klr-ad-hnH" kind="show" identifier="toLogin" id="y59-m4-wuO"/>
                     </connections>

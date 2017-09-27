@@ -11,9 +11,7 @@ import Foundation
 typealias CompletionHandler = (_ Success: Bool) -> ()
 
 // URL Constants
-let BASE_URL = "https://chattyapplication.herokuapp.com/v1/"
-let URL_REGISTER = "\(BASE_URL)account/register"
-let URL_LOGIN = "\(BASE_URL)v1/account/login"
+let DATABASE_URL = "https://chattychat-97d2a.firebaseio.com/"
 
 // Colors
 let purplePlaceholder = #colorLiteral(red: 0.3266413212, green: 0.4215201139, blue: 0.7752227187, alpha: 0.5)

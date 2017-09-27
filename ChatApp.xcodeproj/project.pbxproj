@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		255CEC59E3F7559DF6CA3A27 /* Pods_ChatApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59279859A0C88B089841D2BA /* Pods_ChatApp.framework */; };
 		9E0EDE9A1F7838D4002766B7 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0EDE991F7838D4002766B7 /* AuthService.swift */; };
+		9E19819B1F7BF0A600D5993E /* MessageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E19819A1F7BF0A600D5993E /* MessageService.swift */; };
+		9E19819E1F7BF0C400D5993E /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E19819D1F7BF0C400D5993E /* Channel.swift */; };
 		9EB074A61F75A2D10090FCDC /* ChannelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB074A51F75A2D10090FCDC /* ChannelVC.swift */; };
 		9EB074A81F75A2DF0090FCDC /* ChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB074A71F75A2DF0090FCDC /* ChatVC.swift */; };
 		9EB074A91F75A8C30090FCDC /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EB726BE1F75874C00F461E0 /* SWRevealViewController.m */; };
@@ -33,6 +35,8 @@
 		012A4CDACC924B13391A1CDA /* Pods-ChatApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChatApp/Pods-ChatApp.release.xcconfig"; sourceTree = "<group>"; };
 		59279859A0C88B089841D2BA /* Pods_ChatApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChatApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E0EDE991F7838D4002766B7 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		9E19819A1F7BF0A600D5993E /* MessageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageService.swift; sourceTree = "<group>"; };
+		9E19819D1F7BF0C400D5993E /* Channel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Channel.swift; sourceTree = "<group>"; };
 		9EB074A51F75A2D10090FCDC /* ChannelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelVC.swift; sourceTree = "<group>"; };
 		9EB074A71F75A2DF0090FCDC /* ChatVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatVC.swift; sourceTree = "<group>"; };
 		9EB074AC1F76B0D00090FCDC /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
@@ -84,8 +88,17 @@
 			children = (
 				9E0EDE991F7838D4002766B7 /* AuthService.swift */,
 				9EEE32701F79849D0030CDD7 /* UserDataService.swift */,
+				9E19819A1F7BF0A600D5993E /* MessageService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		9E19819C1F7BF0B300D5993E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9E19819D1F7BF0C400D5993E /* Channel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		9EB074AA1F75A9A30090FCDC /* Controller */ = {
@@ -156,6 +169,7 @@
 				9EEE32781F79DDFE0030CDD7 /* XIBs */,
 				9E0EDE981F7838BD002766B7 /* Services */,
 				9EB074AE1F76BFDE0090FCDC /* Utilities */,
+				9E19819C1F7BF0B300D5993E /* Model */,
 				9EB074AB1F76B0B10090FCDC /* View */,
 				9EB074AA1F75A9A30090FCDC /* Controller */,
 				9EB726BC1F75873700F461E0 /* Supporting Files */,
@@ -324,6 +338,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9EB074A81F75A2DF0090FCDC /* ChatVC.swift in Sources */,
+				9E19819E1F7BF0C400D5993E /* Channel.swift in Sources */,
 				9EEE326D1F797A1D0030CDD7 /* AvatarPickerVC.swift in Sources */,
 				9EEE32761F79DDF90030CDD7 /* ProfileVC.swift in Sources */,
 				9EB074A61F75A2D10090FCDC /* ChannelVC.swift in Sources */,
@@ -333,6 +348,7 @@
 				9EB074B21F76C6B70090FCDC /* LoginVC.swift in Sources */,
 				9EEE32711F79849D0030CDD7 /* UserDataService.swift in Sources */,
 				9EEE326F1F797C1C0030CDD7 /* AvatarCell.swift in Sources */,
+				9E19819B1F7BF0A600D5993E /* MessageService.swift in Sources */,
 				9EB074AD1F76B0D00090FCDC /* GradientView.swift in Sources */,
 				9EE1C8CE1F7583580060F1FA /* AppDelegate.swift in Sources */,
 				9EB074A91F75A8C30090FCDC /* SWRevealViewController.m in Sources */,

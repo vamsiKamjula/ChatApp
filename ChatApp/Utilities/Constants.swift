@@ -8,8 +8,6 @@
 
 import Foundation
 
-typealias CompletionHandler = (_ Success: Bool) -> ()
-
 // URL Constants
 let DATABASE_URL = "https://chattychat-97d2a.firebaseio.com/"
 
@@ -25,12 +23,4 @@ let TO_CREATE_ACCOUNT = "toCreateAccount"
 let UNWIND = "unwindToChannel"
 let TO_AVATAR_PICKER = "toAvatarPicker"
 
-// User Defaults
-let TOKEN_KEY = "token"
-let LOGGED_IN_KEY = "loggedIn"
-let USER_EMAIL = "userEmail"
 
-// Headers
-let HEADER = [
-    "Content-type": "applciation/json; charset=utf-8"
-]

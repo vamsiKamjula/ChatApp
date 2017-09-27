@@ -26,12 +26,10 @@ class LoginVC: UIViewController {
         spinner.startAnimating()
         
         guard let userEmail = userEmailTxt.text, userEmailTxt.text != "" else { return }
-        guard let password = userEmailTxt.text, passwordTxt.text != "" else { return }
+        guard let password = passwordTxt.text, passwordTxt.text != "" else { return }
 
         Auth.auth().signIn(withEmail: userEmail, password: password) { (user, loginError) in
             if loginError != nil {
-                print(userEmail)
-                print(password)
                 print((loginError?.localizedDescription)!)
                 return
             }

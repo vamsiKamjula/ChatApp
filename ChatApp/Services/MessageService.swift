@@ -14,6 +14,7 @@ class MessageService {
     static let instance = MessageService()
     
     var channels = [Channel]()
+    var selectedChannel : Channel?
     
     func findAllChannels(completion: @escaping CompletionHandler) {
         channels.removeAll()
@@ -27,5 +28,9 @@ class MessageService {
                 completion(true)
             }
         }, withCancel: nil)
+    }
+    
+    func clearChannels() {
+        channels.removeAll()
     }
 }

@@ -24,12 +24,10 @@ class ChatVC: UIViewController {
    
         if Auth.auth().currentUser != nil {
             let uid = Auth.auth().currentUser?.uid
-            AuthService.instance.getUserData(uid: uid!)
+            DatabaseService.instance.getUserData(uid: uid!)
             NotificationCenter.default.post(name: NOTIF_USER_DATA_DID_CHANGE, object: nil)
         }
         
-        MessageService.instance.findAllChannels { (data) in
-            print(data)
-        }
+        MessageService.instance.findAllChannels()
     }
 }

@@ -8,6 +8,8 @@
 
 import Foundation
 
+typealias CompletionHandler = (_ Success: Bool) -> ()
+
 // URL Constants
 let DATABASE_URL = "https://chattychat-97d2a.firebaseio.com/"
 

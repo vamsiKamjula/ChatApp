@@ -38,7 +38,7 @@ class ChannelVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     func setupUserInfo() {
         if Auth.auth().currentUser != nil {
             let uid = Auth.auth().currentUser?.uid
-            AuthService.instance.getUserData(uid: uid!)
+            DatabaseService.instance.getUserData(uid: uid!)
             
             loginBtn.setTitle("\(UserDataService.instance.name)", for: .normal)
             userImg.image = UIImage(named: UserDataService.instance.avatarName)

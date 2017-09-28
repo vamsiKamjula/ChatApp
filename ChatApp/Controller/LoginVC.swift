@@ -28,20 +28,13 @@ class LoginVC: UIViewController {
         guard let userEmail = userEmailTxt.text, userEmailTxt.text != "" else { return }
         guard let password = passwordTxt.text, passwordTxt.text != "" else { return }
 
-        Auth.auth().signIn(withEmail: userEmail, password: password) { (user, loginError) in
-            if loginError != nil {
-                print((loginError?.localizedDescription)!)
-                return
+        AuthService.instance.userSignIn(email: userEmail, pass: password) { (success) in
+            if success {
+                NotificationCenter.default.post(name: NOTIF_USER_DATA_DID_CHANGE, object: nil)
+                self.spinner.isHidden = true
+                self.spinner.stopAnimating()
+                self.dismiss(animated: true, completion: nil)
             }
-            
-            guard let uid = user?.uid else { return }
-            
-            AuthService.instance.getUserData(uid: uid)
-
-            NotificationCenter.default.post(name: NOTIF_USER_DATA_DID_CHANGE, object: nil)
-            self.spinner.isHidden = true
-            self.spinner.stopAnimating()
-            self.dismiss(animated: true, completion: nil)
         }
     }
     

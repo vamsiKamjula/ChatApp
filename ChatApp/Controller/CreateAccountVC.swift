@@ -48,29 +48,15 @@ class CreateAccountVC: UIViewController {
         spinner.startAnimating()
         guard let email = emailTxt.text , emailTxt.text != "" else { return }
         guard let pass = passwordTxt.text , passwordTxt.text != "" else { return }
-        Auth.auth().createUser(withEmail: email, password: pass, completion: { (user: User?, error) in
-            if let createUserError = error {
-                print(createUserError.localizedDescription)
-                return
-            }
-            
-            guard let uid = user?.uid else { return }
-            
-            let ref = Database.database().reference(fromURL: "https://chattychat-97d2a.firebaseio.com/")
-            let userReference = ref.child("users").child(uid)
-            let values = ["name": self.usernameTxt.text!, "email": email, "avatarName": self.avatarName, "avatarColor": self.avatarColor]
-            userReference.updateChildValues(values, withCompletionBlock: { (databaseErr, ref) in
-                if databaseErr != nil {
-                    print((databaseErr?.localizedDescription)!)
-                    return
-                }
-                UserDataService.instance.setUserData(id: uid, color: self.avatarColor, avatarName: self.avatarName, email: email, name: self.usernameTxt.text!)
+        
+        AuthService.instance.userSignUp(name: self.usernameTxt.text!, email: email, pass: pass, avatarName: self.avatarName, avatarColor: self.avatarColor) { (success) in
+            if success {
                 self.spinner.isHidden = false
                 self.spinner.stopAnimating()
                 NotificationCenter.default.post(name: NOTIF_USER_DATA_DID_CHANGE, object: nil)
                 self.performSegue(withIdentifier: UNWIND, sender: nil)
-            })
-        })
+            }
+        }
     }
     
     @IBAction func chooseAvtrPressed(_ sender: Any) {

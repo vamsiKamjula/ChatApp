@@ -22,7 +22,12 @@ class AddChannelVC: UIViewController {
     }
 
     @IBAction func createChannelPressed(_ sender: Any) {
+        guard let chanName = nameTxt.text, nameTxt.text != "" else { return }
+        guard let chanDesc = descriptionTxt.text, descriptionTxt.text != "" else { return }
         
+        DatabaseService.instance.uploadNewChannel(channelName: chanName, channelDescription: chanDesc) { (success) in
+            self.dismiss(animated: true, completion: nil)
+        }
     }
     
     @IBAction func closeModalPressed(_ sender: Any) {

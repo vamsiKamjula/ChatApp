@@ -15,7 +15,8 @@ class MessageService {
     
     var channels = [Channel]()
     
-    func findAllChannels() {
+    func findAllChannels(completion: @escaping CompletionHandler) {
+        channels.removeAll()
         Database.database().reference().child("channels").observe(.childAdded, with: { (snapshot) in
             if let dictionary = snapshot.value as? [String: AnyObject] {
                 let name = dictionary["channelName"] as? String
@@ -23,6 +24,7 @@ class MessageService {
                 
                 let channel = Channel(channelTitle: name, channelDescription: description)
                 self.channels.append(channel)
+                completion(true)
             }
         }, withCancel: nil)
     }

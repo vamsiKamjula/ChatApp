@@ -84,5 +84,6 @@ class UserDataService {
         } catch let logoutErr {
             print(logoutErr.localizedDescription)
         }
+        MessageService.instance.clearChannels()
     }
 }

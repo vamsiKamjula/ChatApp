@@ -30,6 +30,9 @@ class ChatVC: UIViewController {
             let uid = Auth.auth().currentUser?.uid
             DatabaseService.instance.getUserData(uid: uid!)
             NotificationCenter.default.post(name: NOTIF_USER_DATA_DID_CHANGE, object: nil)
+        } else {
+            chanNameLbl.text = "Please Log In"
+            MessageService.instance.clearChannels()
         }
     }
     

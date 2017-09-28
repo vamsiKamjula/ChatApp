@@ -32,6 +32,7 @@ class AuthService {
                     return
                 }
                 UserDataService.instance.setUserData(id: uid, color: avatarColor, avatarName: avatarName, email: email, name: name)
+                NotificationCenter.default.post(name: NOTIF_CHANNELS_LOADED, object: nil)
                 completion(true)
             })
         })
@@ -47,6 +48,7 @@ class AuthService {
             guard let uid = user?.uid else { return }
             
             DatabaseService.instance.getUserData(uid: uid)
+            NotificationCenter.default.post(name: NOTIF_CHANNELS_LOADED, object: nil)
             completion(true)
         }
     }

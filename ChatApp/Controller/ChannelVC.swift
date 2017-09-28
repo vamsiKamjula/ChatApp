@@ -23,6 +23,22 @@ class ChannelVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         tableView.dataSource = self
         self.revealViewController().rearViewRevealWidth = self.view.frame.size.width - 60
         NotificationCenter.default.addObserver(self, selector: #selector(ChannelVC.userDataDidChange(_:)), name: NOTIF_USER_DATA_DID_CHANGE, object: nil)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(channelsLoaded(_:)), name: NOTIF_CHANNELS_LOADED, object: nil)
+        
+        if Auth.auth().currentUser != nil {
+            MessageService.instance.findAllChannels(completion: { (success) in
+                if success {
+                    self.tableView.reloadData()
+                }
+            })
+        } else {
+            MessageService.instance.clearChannels()
+            self.tableView.reloadData()
+        }
+    }
+    
+    @objc func channelsLoaded(_ notif: Notification) {
         MessageService.instance.findAllChannels { (success) in
             if success {
                 self.tableView.reloadData()
@@ -35,9 +51,11 @@ class ChannelVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
     
     @IBAction func addChannelPressed(_ sender: Any) {
-        let addChannel = AddChannelVC()
-        addChannel.modalPresentationStyle = .custom
-        present(addChannel, animated: true, completion: nil)
+        if Auth.auth().currentUser != nil {
+            let addChannel = AddChannelVC()
+            addChannel.modalPresentationStyle = .custom
+            present(addChannel, animated: true, completion: nil)
+        }
     }
     
     func setupUserInfo() {
@@ -52,6 +70,7 @@ class ChannelVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             loginBtn.setTitle("Login", for: .normal)
             userImg.image = UIImage(named: "menuProfileIcon")
             userImg.backgroundColor = UIColor.clear
+            tableView.reloadData()
         }
     }
     

@@ -118,6 +118,9 @@
                                     <constraint firstAttribute="height" constant="30" id="Zkk-1r-3WL"/>
                                 </constraints>
                                 <state key="normal" image="addChannelButton"/>
+                                <connections>
+                                    <action selector="addChannelPressed:" destination="l1x-EG-p5l" eventType="touchUpInside" id="STD-F1-XRF"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menuProfileIcon" translatesAutoresizingMaskIntoConstraints="NO" id="fa5-2E-FcS" customClass="CircleImage" customModule="ChatApp" customModuleProvider="target">
                                 <rect key="frame" x="10" y="572" width="75" height="75"/>

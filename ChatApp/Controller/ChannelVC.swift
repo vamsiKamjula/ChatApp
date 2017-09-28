@@ -29,6 +29,12 @@ class ChannelVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         self.setupUserInfo()
     }
     
+    @IBAction func addChannelPressed(_ sender: Any) {
+        let addChannel = AddChannelVC()
+        addChannel.modalPresentationStyle = .custom
+        present(addChannel, animated: true, completion: nil)
+    }
+    
     func setupUserInfo() {
         if Auth.auth().currentUser != nil {
             let uid = Auth.auth().currentUser?.uid

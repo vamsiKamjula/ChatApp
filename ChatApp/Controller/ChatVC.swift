@@ -46,16 +46,16 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
     
     @IBAction func sendBtnPressed(_ sender: Any) {
+        guard let messageText = messageTxtLbl.text, messageTxtLbl.text != "" else { return }
         let uid = Auth.auth().currentUser?.uid
         let chanName = MessageService.instance.selectedChannel?.channelTitle ?? ""
-        DatabaseService.instance.uploadMsg(channelName: chanName, message: messageTxtLbl.text!, userId: uid!) { (success) in
+        DatabaseService.instance.uploadMsg(channelName: chanName, message: messageText, userId: uid!) { (success) in
             if success {
                 self.view.endEditing(true)
                 self.messageTxtLbl.text = ""
                 self.tableView.reloadData()
             }
         }
-        
     }
     
     @objc func handleTap() {
@@ -65,10 +65,10 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @objc func selectedChannelName(_ notif: Notification) {
         let channelName = MessageService.instance.selectedChannel?.channelTitle ?? ""
         chanNameLbl.text = "#\(channelName)"
-        MessageService.instance.messages.removeAll()
+        MessageService.instance.clearMessages()
+        self.tableView.reloadData()
         MessageService.instance.getAllMessagesByChannel(chanName: channelName) { (success) in
             if success {
-                print("Success")
                 self.tableView.reloadData()
             }
         }

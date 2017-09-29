@@ -35,13 +35,13 @@ class MessageService {
 
 Database.database().reference().child("channels").child(chanName).child("messages").observe(.childAdded, with: { (snapshot) in
             if let data = snapshot.value as? [String: AnyObject] {
-                let messageBody = data["message"] as? String
+                guard let messageBody = data["message"] as? String else { return }
                 let username = data["username"] as? String
                 let userAvatar = data["userAvatar"] as? String
                 let userAvatarColor = data["userAvatarColor"] as? String
                 let userId = data["userId"] as? String
                 
-                let message = Message(message: messageBody!, username: username!, userAvatar: userAvatar!, userAvatarColor: userAvatarColor!, userId: userId!)
+                let message = Message(message: messageBody, username: username!, userAvatar: userAvatar!, userAvatarColor: userAvatarColor!, userId: userId!)
                 self.messages.append(message)
             }
         completion(true)

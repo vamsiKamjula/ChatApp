@@ -65,8 +65,13 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @objc func selectedChannelName(_ notif: Notification) {
         let channelName = MessageService.instance.selectedChannel?.channelTitle ?? ""
         chanNameLbl.text = "#\(channelName)"
-        MessageService.instance.getAllMessagesByChannel(chanName: channelName)
-        self.tableView.reloadData()
+        MessageService.instance.messages.removeAll()
+        MessageService.instance.getAllMessagesByChannel(chanName: channelName) { (success) in
+            if success {
+                print("Success")
+                self.tableView.reloadData()
+            }
+        }
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -79,7 +84,9 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "messageCell", for: indexPath) as? MessageCell {
-        
+            
+            let message = MessageService.instance.messages[indexPath.row]
+            cell.configureCell(message: message)
             return cell
         } else {
             return UITableViewCell()

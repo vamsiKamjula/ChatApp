@@ -31,9 +31,20 @@ class MessageService {
         }, withCancel: nil)
     }
     
-    func getAllMessagesByChannel(chanName: String) {
-        Database.database().reference().child("channels").child(chanName).child("messages").observe(.childAdded, with: { (snapshot) in
-            print(snapshot)
+    func getAllMessagesByChannel(chanName: String, completion: @escaping CompletionHandler) {
+
+Database.database().reference().child("channels").child(chanName).child("messages").observe(.childAdded, with: { (snapshot) in
+            if let data = snapshot.value as? [String: AnyObject] {
+                let messageBody = data["message"] as? String
+                let username = data["username"] as? String
+                let userAvatar = data["userAvatar"] as? String
+                let userAvatarColor = data["userAvatarColor"] as? String
+                let userId = data["userId"] as? String
+                
+                let message = Message(message: messageBody!, username: username!, userAvatar: userAvatar!, userAvatarColor: userAvatarColor!, userId: userId!)
+                self.messages.append(message)
+            }
+        completion(true)
         }, withCancel: nil)
     }
     

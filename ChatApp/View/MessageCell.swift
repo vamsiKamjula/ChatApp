@@ -22,10 +22,10 @@ class MessageCell: UITableViewCell {
     }
 
     func configureCell(message: Message) {
-        userNameLbl.text = message.username
-        messageBodyLbl.text = message.message
-        userImg.image = UIImage(named: message.userAvatar)
-        userImg.backgroundColor = UserDataService.instance.returnUIColor(components: message.userAvatarColor)
+        userNameLbl.text = "\((message.username)!)"
+        messageBodyLbl.text = "\((message.message)!)"
+        userImg.image = UIImage(named: "\((message.userAvatar)!)")
+        userImg.backgroundColor = UserDataService.instance.returnUIColor(components: "\((message.userAvatarColor)!)")
     }
 
 }

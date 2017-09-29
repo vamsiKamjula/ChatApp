@@ -31,7 +31,17 @@ class MessageService {
         }, withCancel: nil)
     }
     
+    func getAllMessagesByChannel(chanName: String) {
+        Database.database().reference().child("channels").child(chanName).child("messages").observe(.childAdded, with: { (snapshot) in
+            print(snapshot)
+        }, withCancel: nil)
+    }
+    
     func clearChannels() {
         channels.removeAll()
+    }
+    
+    func clearMessages() {
+        messages.removeAll()
     }
 }

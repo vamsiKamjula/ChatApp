@@ -24,6 +24,10 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         view.bindToKeyboard()
         tableView.delegate = self
         tableView.dataSource = self
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(handleTap))
+        view.addGestureRecognizer(tap)
+        
         menuBtn.addTarget(self.revealViewController(), action: #selector(SWRevealViewController.revealToggle(_:)), for: .touchUpInside)
         self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         self.view.addGestureRecognizer(self.revealViewController().tapGestureRecognizer())
@@ -42,12 +46,27 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
     
     @IBAction func sendBtnPressed(_ sender: Any) {
+        let uid = Auth.auth().currentUser?.uid
+        let chanName = MessageService.instance.selectedChannel?.channelTitle ?? ""
+        DatabaseService.instance.uploadMsg(channelName: chanName, message: messageTxtLbl.text!, userId: uid!) { (success) in
+            if success {
+                self.view.endEditing(true)
+                self.messageTxtLbl.text = ""
+                self.tableView.reloadData()
+            }
+        }
         
+    }
+    
+    @objc func handleTap() {
+        view.endEditing(true)
     }
     
     @objc func selectedChannelName(_ notif: Notification) {
         let channelName = MessageService.instance.selectedChannel?.channelTitle ?? ""
         chanNameLbl.text = "#\(channelName)"
+        MessageService.instance.getAllMessagesByChannel(chanName: channelName)
+        self.tableView.reloadData()
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {

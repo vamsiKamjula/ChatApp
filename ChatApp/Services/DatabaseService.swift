@@ -29,10 +29,24 @@ class DatabaseService {
         
     func uploadNewChannel(channelName: String, channelDescription: String, completion: @escaping CompletionHandler) {
         let ref = Database.database().reference()
-        let channelReference = ref.child("channels").childByAutoId()
+        let channelReference = ref.child("channels").child(channelName)
         let values = ["channelName": channelName, "channelDescription": channelDescription]
         
         channelReference.setValue(values) { (error, ref) in
+            if error != nil {
+                print((error?.localizedDescription)!)
+                return
+            }
+            completion(true)
+        }
+    }
+    
+    func uploadMsg(channelName: String, message: String, userId: String, completion: @escaping CompletionHandler) {
+        let ref = Database.database().reference()
+        let msgReference = ref.child("channels").child(channelName).child("messages").childByAutoId()
+        let values = ["message": message, "userAvatar": UserDataService.instance.avatarName, "userAvatarColor": UserDataService.instance.avatarColor, "username": UserDataService.instance.name, "userId": userId]
+        
+        msgReference.setValue(values) { (error, ref) in
             if error != nil {
                 print((error?.localizedDescription)!)
                 return
